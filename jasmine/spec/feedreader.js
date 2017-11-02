@@ -147,7 +147,7 @@ $(function() {
                  });
          });
 
-         it('when new feed is loaded content changes', function(done) {
+         it('changes content', function(done) {
            //checks for equality between initial feed and new feed
                  expect(newFeed).not.toEqual(oldFeed);
                  done();
