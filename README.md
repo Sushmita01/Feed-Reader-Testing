@@ -1,14 +1,14 @@
 ## Feed Reader Testing
 
 
-In this project we have a web-based application that reads RSS feeds. Using the Jasmine library, I have written several test modules which check whether the website is functioning as its supposed to without any human intervention.
+In this project we have a web-based application that reads RSS feeds. Using the Jasmine library, I have written several test modules which can check whether the website is functioning as it is supposed to without any human intervention.
 
 ### Steps required to run the application:
  1. Download the zip file of the gitHub repository 
  2. Save the file locally somewhere and run index.html from your browser
  3. The test results are loaded at the bottom of the website
 
-### Tests present
+### Tests present:
 
 1. RSS Feeds
    - are defined
