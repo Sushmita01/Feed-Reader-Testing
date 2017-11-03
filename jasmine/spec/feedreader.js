@@ -34,9 +34,9 @@ $(function() {
         it('has URL defined and URL is not empty',function() {
           var urlList=[];
           //making an array containing all the urls
-          allFeeds.forEach(function(feedObj,index) {
-            urlList[index]=feedObj.url;
-          });
+          var urlList = allFeeds.map(function(feedObj) {
+          return feedObj.url;
+        });
           //looping through the array of urls and testing them
           urlList.forEach(function(value){
             //check if defined
@@ -53,9 +53,9 @@ $(function() {
          it('has name defined and name is not empty',function() {
            var nameList=[];
            //making an array containing all the feed names
-           allFeeds.forEach(function(feedObj,index) {
-             nameList[index]=feedObj.name;
-           });
+           var nameList = allFeeds.map(function(feedObj) {
+           return feedObj.name;
+          });
            //looping through the array of feed names and testing them
            nameList.forEach(function(value){
              //check if defined
@@ -70,7 +70,7 @@ $(function() {
 
     /* A new test suite named "The menu" */
     describe('The menu',function(){
-
+      var body;
       //executes before every test in this test suite
       beforeEach(function() {
           body=document.querySelector('body');
@@ -91,7 +91,7 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
           it('changes visibility when clicked',function(){
-            menuIcon=document.querySelector('.menu-icon-link');
+            var menuIcon=document.querySelector('.menu-icon-link');
             //triggers the click event to toggle menu visibility
             menuIcon.click();
             expect (body.classList.contains("menu-hidden")).toBe(false);
@@ -138,13 +138,13 @@ $(function() {
              //storing the initial feed in oldFeed
              loadFeed(0, function() {
                   oldFeed = feed.html();
-                 done();
-             });
              //storing the newly loaded feed in newFeed
-             loadFeed(1, function() {
-                 newFeed = feed.html();
-                 done();
-                 });
+                  loadFeed(1, function() {
+                      newFeed = feed.html();
+                      done();
+                      });
+             });
+
          });
 
          it('changes content', function(done) {
