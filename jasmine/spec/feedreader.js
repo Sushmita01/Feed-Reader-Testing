@@ -34,7 +34,7 @@ $(function() {
         it('has URL defined and URL is not empty',function() {
           var urlList=[];
           //making an array containing all the urls
-          var urlList = allFeeds.map(function(feedObj) {
+          urlList = allFeeds.map(function(feedObj) {
           return feedObj.url;
         });
           //looping through the array of urls and testing them
@@ -53,7 +53,7 @@ $(function() {
          it('has name defined and name is not empty',function() {
            var nameList=[];
            //making an array containing all the feed names
-           var nameList = allFeeds.map(function(feedObj) {
+           nameList = allFeeds.map(function(feedObj) {
            return feedObj.name;
           });
            //looping through the array of feed names and testing them
