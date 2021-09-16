@@ -1,4 +1,4 @@
-## Feed Reader Testing
+## Feed Reader
 
 
 In this project we have a web-based application that reads RSS feeds. Using the Jasmine library, I have written several test modules which can check whether the website is functioning as it is supposed to without any human intervention.
